@@ -1,0 +1,1 @@
+2. Odev oncesi taslak readme dosyasi.
