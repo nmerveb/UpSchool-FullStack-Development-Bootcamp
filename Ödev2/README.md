@@ -1,1 +1,1 @@
-2. Odev oncesi taslak readme dosyasi.
+2. Password Generator Porjesine undo butonu eklendi.
