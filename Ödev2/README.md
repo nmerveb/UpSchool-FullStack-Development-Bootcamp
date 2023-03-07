@@ -1,1 +1,1 @@
-2. Password Generator Porjesine undo butonu eklendi.
+2. Password Generator Projesine undo butonu eklendi.
