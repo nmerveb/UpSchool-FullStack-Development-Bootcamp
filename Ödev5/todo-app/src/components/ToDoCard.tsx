@@ -32,7 +32,6 @@ const ToDoCard: React.FC<ToDoCardProps> = ({
       onDoubleClick={handleDoubleClick}
       style={{
         textDecoration: isCompleted ? "line-through" : "none",
-        boxShadow: "0 0 5px #3054a5",
       }}
     >
       <Card.Content>
