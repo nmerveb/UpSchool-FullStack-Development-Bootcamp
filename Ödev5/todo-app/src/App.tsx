@@ -6,10 +6,10 @@ import {
   Card,
   Container,
   Header,
-  Icon,
   Image,
   Input,
 } from "semantic-ui-react";
+import ToDoCard from "./components/ToDoCard";
 
 type CardData = {
   id: number;
@@ -44,7 +44,7 @@ const App = () => {
   }, [toDoList]);
 
   useEffect(() => {
-    setIsAddDisabled(!(newToDo && deadline)); // İki input alanı da dolu değilse Add düğmesini devre dışı bırak
+    setIsAddDisabled(!(newToDo && deadline));
   }, [newToDo, deadline]);
 
   const addToDo = () => {
@@ -136,33 +136,15 @@ const App = () => {
 
       <Card.Group>
         {toDoList.map((toDo) => (
-          <Card
-            fluid
+          <ToDoCard
             key={toDo.id}
-            onDoubleClick={() => handleDoubleClick(toDo.id)}
-          >
-            <Card.Content
-              style={{
-                textDecoration: toDo.isCompleted ? "line-through" : "none",
-              }}
-            >
-              <Card.Header>{toDo.header}</Card.Header>
-              <Card.Description>
-                Deadline: {new Date(toDo.deadline).toDateString()}
-              </Card.Description>
-            </Card.Content>
-            <Icon
-              name="close"
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "10px",
-                cursor: "pointer",
-                color: "red",
-              }}
-              onClick={() => handleRemove(toDo.id)}
-            />
-          </Card>
+            id={toDo.id}
+            header={toDo.header}
+            isCompleted={toDo.isCompleted}
+            deadline={toDo.deadline}
+            onDoubleClick={handleDoubleClick}
+            onRemove={handleRemove}
+          />
         ))}
       </Card.Group>
     </Container>
