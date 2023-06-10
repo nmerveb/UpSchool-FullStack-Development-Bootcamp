@@ -1,0 +1,11 @@
+body {
+  background-color: #faebab;
+}
+
+.header-style {
+  color: #3054a5;
+  margin-top: "10%";
+  margin-bottom: "5%";
+  text-align: "center";
+  font-size: 15%;
+}

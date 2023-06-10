@@ -1,0 +1,10 @@
+@import "~semantic-ui-css/semantic.min.css";
+
+body {
+  background-color: #ffeb97;
+}
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  background-color: #ffeb97;
+}
